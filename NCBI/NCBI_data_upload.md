@@ -1,7 +1,7 @@
 # Pointers:
 
 1. Always best to create a bioproject first and get PRJNA number
-2. Then create a BioSample project - in the excel provide the Bioproject (PRJNA) number
+2. Then create a BioSample project - in the Microbe1.0 excel provide the Bioproject (PRJNA) number
 3. Then do the SRA submission.
 4. For the SRA submission, if you have two types of data such as Ilumina and Nanopore sequences for the same sample, then in the SRA_meta_acc file
 have the Illumina information and followed by nanopore details. 
@@ -50,21 +50,3 @@ ftp> cd CPE_Trans_Prj_Ill
 250 CWD command successful
 
 ftp> mput \*.fastq.gz
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
