@@ -10,6 +10,7 @@ have the Illumina information and followed by nanopore details.
 7. If your data samples are less than 1000, but if you have two types of data such as Illumina and Nanopore for n=600 samples, then it is better to split into 
 two SRA_meta_acc files since NCBI does not allow meta_data more than 1000 records. Because here 600\*2 becomes 1200 records.
 8. aspera command line seems a bit confusing to use, ftp seems to be straightforward. Just need to get username password from SRA submission
+9. Advantage with ftp is: Even if sometimes the internet connection drops, we can resume from where transfer stopped
 
 
 
