@@ -107,7 +107,7 @@ Chr1	3442933	.	C	CG	1048.38	.	AB=0;AO=33;DP=33;QA=1221;QR=0;RO=0;TYPE=ins	GT:DP:
 ```
 
 But the above command, would give unique SNPs of test1.vcf.gz not the test2.vcf.gz, test3.vcf.gz samples. So, we change the file postions for all the files and rerun the same command.
-I adapted a perl script from here: https://www.perlmonks.org/?node_id=146419 which generates commands for identifying unique SNPs for each VCF file.
+I adapted code from [here](https://www.perlmonks.org/?node_id=146419): and created a perl script [fileCombinations_generators.pl](https://github.com/ramadatta/tute/blob/main/SNPs/fileCombinations_generators.pl) which generates commands for identifying unique SNPs for each VCF file.
 
 ```
 % ls *gz >fileList
