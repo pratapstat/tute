@@ -13,7 +13,7 @@ editor_options:
 
 ## Boxplots
 
-This markdown is inspired by this SO post <https://stackoverflow.com/questions/11952819/is-it-possible-to-plot-a-boxplot-from-previously-calculated-statistics-easily-i>.
+This markdown is inspired by this [SO post](https://stackoverflow.com/questions/11952819/is-it-possible-to-plot-a-boxplot-from-previously-calculated-statistics-easily-i).
 
 Suppose, we have of set of summary stats from various datasets such as max, min, mean. For example, in this case, I have max, min, mean substitution rate that I calculated from BEAST tool. Now, I want to plot the values into box-plots for each of the species. Usually boxplots from the ggplot2 calculates these values and Quartile values from the dataset, is there a way to plot the pre-calculated values we calculated into elegant boxplots? 
 
