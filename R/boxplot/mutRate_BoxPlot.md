@@ -1,5 +1,5 @@
 ---
-title: "Boxplot from pre-calculated values"
+title: "Plot Boxplots from pre-calculated values"
 author: "Prakki Sai Rama Sridatta"
 date: "2021-09-10"
 output:
@@ -11,7 +11,7 @@ editor_options:
 
 
 
-## Boxplots
+## Plot boxplots from pre-calculated values
 
 This markdown is inspired by this [SO post](https://stackoverflow.com/questions/11952819/is-it-possible-to-plot-a-boxplot-from-previously-calculated-statistics-easily-i).
 
