@@ -24,7 +24,7 @@ Yes. The following is one approach to the above questions.
 
 ```r
 library(ggplot2)
-setwd("/data02/Analysis/Projects/8_Aqueos_samples/13_BEAST/Plot_SubstitutionRates")
+setwd("Plot_SubstitutionRates")
 
 df <- read.table("rates.list",header = TRUE, sep = "\t")
 df
