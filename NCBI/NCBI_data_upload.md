@@ -11,6 +11,7 @@ have the Illumina information and followed by nanopore details.
 two SRA_meta_acc files since NCBI does not allow meta_data more than 1000 records. Because here 600\*2 becomes 1200 records.
 8. aspera command line seems a bit confusing to use, ftp seems to be straightforward. Just need to get username password from SRA submission
 9. Advantage with ftp is: Even if sometimes the internet connection drops, we can resume from where transfer stopped
+10. We cannot upload half of our data with FTP and half of our data aspera. It is either aspera or FTP. 
 
 
 
