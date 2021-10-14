@@ -58,7 +58,7 @@ foreach my $tmp (keys %seen)
 	if(!(exists($hash{$tmp_arr[0]})))
 	{
 	$hash{$tmp_arr[0]}="$tmp";
-		(my $uniqSNP_fileName = $tmp_arr[0]) =~ s/vcf.gz/unique.snps.filt.txt/g;
+		(my $uniqSNP_fileName = $tmp_arr[0]) =~ s/vcf.gz/unique.variants.filt.txt/g;
 	print "bcftools isec -C $tmp >$uniqSNP_fileName\n";
 	}
 	else
