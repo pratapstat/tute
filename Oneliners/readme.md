@@ -16,3 +16,8 @@ sed 's/#/ /' |
 awk '{ if ($1 ~ /^>/) { gsub(/>/, "", $1); 
 print ">plsdb_v2020_11_19~~~"$1"~~~"$1"~~"$2} else { print $0; } }' >ABRicate_plsdb.fasta
 ```
+### Remove dates after the pipe from a newick file
+```
+cat postGubbins.filtered_polymorphic_sites_BEAST_withDates_woSampleswithdates_TTSH.fasta.newick | sed 's/|/\n/g' | sed 's/^[^:]*:/:/g' | tr -d '\n' 
+
+```
