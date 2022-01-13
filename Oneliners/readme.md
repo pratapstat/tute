@@ -23,7 +23,7 @@ cat file.newick | sed 's/|/\n/g' | sed 's/^[^:]*:/:/g' | tr -d '\n'
 ```
 ### Extract accessory genome as fasta files from the roary output
 
-##### 1. First generate the locus_tag of the accessory genes (pan_genome_results)
+##### 1. First generate the locus_tag of the accessory genes (output file: pan_genome_results)
 
 ```
 query_pan_genome -a complement -g clustered_proteins *.gff
