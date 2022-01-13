@@ -21,7 +21,7 @@ print ">plsdb_v2020_11_19~~~"$1"~~~"$1"~~"$2} else { print $0; } }' >ABRicate_pl
 cat file.newick | sed 's/|/\n/g' | sed 's/^[^:]*:/:/g' | tr -d '\n' 
 
 ```
-### Extract accessory genome from the roary output
+### Extract accessory genome as fasta files from the roary output
 
 ##### 1. First generate the locus_tag of the accessory genes (pan_genome_results)
 
@@ -39,6 +39,9 @@ file=`fgrep -m1 "$locus_tag" Combined_local_gffs.txt | awk -F':' '{print $1}' | 
 awk -v var="$locus_tag" 'BEGIN {RS=">"} $0~var {print ">"$0}' Prokka/MySampleFolders/"$file"_prokka_out/"$file".ffn >accessory_gene_representatives/"$locus_tag".fasta;  
 done 
 ```
+
+These genes can be combined and can be functionally characterised for downstream analysis
+
 Extracting 5477 genes took me around ~19 mins by this way
 
 
