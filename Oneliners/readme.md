@@ -1,4 +1,4 @@
-### Running spades
+### > Running spades
 
 ```
 time while read line; 
@@ -7,7 +7,7 @@ spOut=`echo "$line" | sed 's/-1 //g' | awk -F/ '{print $2"_"$1"_spades_out"}'`;
 spades.py $line -o $spOut --careful -t 48 ; 
 done < <(ls -1 */*/*gz | paste  - - | awk '{print "-1 "$1" -2 "$2}')
 ```
-### Convert plsdb sequence into ABRicate database format
+### > Convert plsdb sequence into ABRicate database format
 
 ```
 cat /storage/data/Storage/plsdb/plsdb.fasta | sed 's/ /#/' | 
@@ -16,12 +16,12 @@ sed 's/#/ /' |
 awk '{ if ($1 ~ /^>/) { gsub(/>/, "", $1); 
 print ">plsdb_v2020_11_19~~~"$1"~~~"$1"~~"$2} else { print $0; } }' >ABRicate_plsdb.fasta
 ```
-### Remove dates after the pipe from a newick file
+### > Remove dates after the pipe from a newick file
 ```
 cat file.newick | sed 's/|/\n/g' | sed 's/^[^:]*:/:/g' | tr -d '\n' 
 
 ```
-### Extract accessory genome as fasta files from the roary output
+### > Extract accessory genome as fasta files from the roary output
 
 ##### 1. First generate the locus_tag of the accessory genes (output file: pan_genome_results)
 
