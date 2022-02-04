@@ -1,4 +1,4 @@
-### > Running spades
+### >1 Running spades
 
 ```
 time while read line; 
@@ -7,7 +7,7 @@ spOut=`echo "$line" | sed 's/-1 //g' | awk -F/ '{print $2"_"$1"_spades_out"}'`;
 spades.py $line -o $spOut --careful -t 48 ; 
 done < <(ls -1 */*/*gz | paste  - - | awk '{print "-1 "$1" -2 "$2}')
 ```
-### > Convert plsdb sequence into ABRicate database format
+### >2 Convert plsdb sequence into ABRicate database format
 
 ```
 cat /storage/data/Storage/plsdb/plsdb.fasta | sed 's/ /#/' | 
@@ -16,12 +16,12 @@ sed 's/#/ /' |
 awk '{ if ($1 ~ /^>/) { gsub(/>/, "", $1); 
 print ">plsdb_v2020_11_19~~~"$1"~~~"$1"~~"$2} else { print $0; } }' >ABRicate_plsdb.fasta
 ```
-### > Remove dates after the pipe from a newick file
+### >3 Remove dates after the pipe from a newick file
 ```
 cat file.newick | sed 's/|/\n/g' | sed 's/^[^:]*:/:/g' | tr -d '\n' 
 
 ```
-### > Extract accessory genome as fasta files from the roary output
+### >4 Extract accessory genome as fasta files from the roary output
 
 ##### 1. First generate the locus_tag of the accessory genes (output file: pan_genome_results)
 
@@ -44,4 +44,12 @@ These genes can be combined and can be functionally characterised for downstream
 
 Extracting 5477 genes took me around ~19 mins by this way
 
+### >5 Replace fasta headers based on the given headers_list.txt
+```
+head headers_list.txt
+lcl|KJ693272.1_cds_AIA12764.1_1	omcdb~~~KJ693272.1~~~AIA12764.1~~~S07_TE.24_364-1143
+lcl|KJ693393.1_cds_AIA12941.1_1	omcdb~~~KJ693393.1~~~AIA12941.1~~~S07_TE.28_2-379
 
+awk 'FNR==NR{  a[">"$1]=$2;next}$1 in a{  sub(/>/,">"a[$1]"|",$1)}1' headers_list.txt omc.fa | cut -f1 -d "|" >omc_v2.fa
+
+```
