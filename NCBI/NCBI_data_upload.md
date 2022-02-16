@@ -1,3 +1,19 @@
+### Case: 
+
+So, If have 20 bacterial samples, then I will have 20 x 2 = 40 fastq files for Illumina paired data and 20 x 1 = 20 fastq files for Nanopore data that I need to upload.
+
+1) Create a Bioproject (Get the Bioproject accession)
+2) Create a Biosample (Use Bioproject accession to fill the Microbe template (template depends on the organism bacterial in this case;can be downloaded from NCBI only as going through the steps)
+3) For Illumina data 
+   - Create a SRA submission 1
+   - Need to fill the metadata template using the SAMN numbers generated from Biosample submission.
+   - Upload the data either using aspera or FTP.
+4) For Nanopore data 
+   - Create a SRA submission 2
+   - Need to fill the metadata template using the SAMN numbers generated from Biosample submission.
+   - Upload the data either using aspera or FTP.
+
+
 # Pointers:
 
 1. Always best to create a bioproject first and get PRJNA number
