@@ -288,6 +288,14 @@ executor >  local (4)
 [-        ] process > output                  -
 
 ```
+### While running the nextflow pipeline in another tab running following command shows the pipeline running without issues
+```
+$ docker ps -a
+CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS         PORTS     NAMES
+1c1e39722ce8   ontresearch/wf-artic:v0.3.12   "/bin/bash -c 'eval …"   5 minutes ago   Up 5 minutes             nxf-KJc4qbq1cG9gy7Y2eqMC3nmf
+c0466175b8e8   ontresearch/wf-artic:v0.3.12   "/bin/bash -c 'eval …"   5 minutes ago   Up 5 minutes             nxf-JXPFTJPVgds7RE0LYpWDKiW5
+
+```
 
 
 
