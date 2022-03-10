@@ -271,21 +271,31 @@ Checking fastq input.
 Barcoded directories detected.
 Warning: Excluding directories not containing .fastq(.gz) files:
    - /data01/Nanopore_data_ARTIC/artic/test_data/sars-samples-demultiplexed/barcode13
-executor >  local (4)
-[9e/7b3c20] process > pipeline:getVersions    [  0%] 0 of 1
-[d6/ab2c59] process > pipeline:getParams      [  0%] 0 of 1
-[-        ] process > pipeline:copySchemeDir  [  0%] 0 of 1
-[13/d71d3d] process > pipeline:preArticQC (1) [  0%] 0 of 2
-[-        ] process > pipeline:runArtic       -
-[-        ] process > pipeline:combineDepth   -
-[-        ] process > pipeline:allConsensus   -
-[-        ] process > pipeline:allVariants    -
-[54/bb60dc] process > pipeline:prep_nextclade [  0%] 0 of 1
-[-        ] process > pipeline:nextclade      -
-[-        ] process > pipeline:pangolin       -
-[-        ] process > pipeline:telemetry      -
-[-        ] process > pipeline:report         -
-[-        ] process > output                  -
+executor >  local (33)
+[9e/7b3c20] process > pipeline:getVersions    [100%] 1 of 1 ✔
+[d6/ab2c59] process > pipeline:getParams      [100%] 1 of 1 ✔
+[70/b94054] process > pipeline:copySchemeDir  [100%] 1 of 1 ✔
+[91/d46d05] process > pipeline:preArticQC (2) [100%] 2 of 2 ✔
+[44/1ccb10] process > pipeline:runArtic (1)   [100%] 2 of 2 ✔
+[97/180591] process > pipeline:combineDepth   [100%] 1 of 1 ✔
+[b7/950a0d] process > pipeline:allConsensus   [100%] 1 of 1 ✔
+[fd/414e60] process > pipeline:allVariants    [100%] 1 of 1 ✔
+[54/bb60dc] process > pipeline:prep_nextclade [100%] 1 of 1 ✔
+[64/8ec5d3] process > pipeline:nextclade      [100%] 1 of 1 ✔
+[ee/06ee81] process > pipeline:pangolin       [100%] 1 of 1 ✔
+[88/74e10d] process > pipeline:telemetry      [100%] 1 of 1 ✔
+[15/a88236] process > pipeline:report         [100%] 1 of 1 ✔
+[c3/9e9d6d] process > output (15)             [100%] 18 of 18 ✔
+Completed at: 10-Mar-2022 11:50:13
+Duration    : 24m 54s
+CPU hours   : 0.5
+Succeeded   : 33
+
+
+
+real	24m58.302s
+user	1m15.834s
+sys	0m10.498s
 
 ```
 ### While running the nextflow pipeline in another tab running following command shows the pipeline running without issues
@@ -296,7 +306,84 @@ CONTAINER ID   IMAGE                          COMMAND                  CREATED  
 c0466175b8e8   ontresearch/wf-artic:v0.3.12   "/bin/bash -c 'eval …"   5 minutes ago   Up 5 minutes             nxf-JXPFTJPVgds7RE0LYpWDKiW5
 
 ```
+### In the nextflow.config, changed the following parameters to fasten the process.:
 
+`executor {
+    $local {
+        cpus = 60
+        memory = "256 GB"
+    }
+}`
+
+### The time difference is remarkable! 24 mins to 7 mins as shown below
+
+```
+time nextflow run epi2me-labs/wf-artic -w WD_cpe_60_mem_256gb -profile standard --fastq /data01/Nanopore_data_ARTIC/artic/test_data/sars-samples-demultiplexed --samples /data01/Nanopore_data_ARTIC/artic/test_data/sample_sheet --out_dir test_data_output_cpe_60_mem_256gb/
+N E X T F L O W  ~  version 21.04.3
+Launching `epi2me-labs/wf-artic` [infallible_lumiere] - revision: d875912881 [master]
+
+WARN: Found unexpected parameters:
+* --samples: /data01/Nanopore_data_ARTIC/artic/test_data/sample_sheet
+- Ignore this warning: params.schema_ignore_params = "samples" 
+
+Core Nextflow options
+  revision       : master
+  runName        : infallible_lumiere
+  containerEngine: docker
+  launchDir      : /data01/Nanopore_data_ARTIC/artic
+  workDir        : /data01/Nanopore_data_ARTIC/artic/WD_cpe_60_mem_256gb
+  projectDir     : /home/prakki/.nextflow/assets/epi2me-labs/wf-artic
+  userName       : prakki
+  profile        : standard
+  configFiles    : /home/prakki/.nextflow/assets/epi2me-labs/wf-artic/nextflow.config
+
+Basic Input/Output Options
+  out_dir        : test_data_output_cpe_60_mem_256gb/
+  fastq          : /data01/Nanopore_data_ARTIC/artic/test_data/sars-samples-demultiplexed
+
+Advanced options
+  normalise      : 200
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+------------------------------------------------------
+If you use wf-artic for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+
+
+Checking fastq input.
+Barcoded directories detected.
+Warning: Excluding directories not containing .fastq(.gz) files:
+   - /data01/Nanopore_data_ARTIC/artic/test_data/sars-samples-demultiplexed/barcode13
+executor >  local (33)
+[d5/781c3c] process > pipeline:getVersions    [100%] 1 of 1 ✔
+[6a/be8d39] process > pipeline:getParams      [100%] 1 of 1 ✔
+[72/b2218c] process > pipeline:copySchemeDir  [100%] 1 of 1 ✔
+[77/4e2572] process > pipeline:preArticQC (1) [100%] 2 of 2 ✔
+[ca/92c2cc] process > pipeline:runArtic (2)   [100%] 2 of 2 ✔
+[f7/464004] process > pipeline:combineDepth   [100%] 1 of 1 ✔
+[01/b4e495] process > pipeline:allConsensus   [100%] 1 of 1 ✔
+[6e/64a3e7] process > pipeline:allVariants    [100%] 1 of 1 ✔
+[66/5ea2b9] process > pipeline:prep_nextclade [100%] 1 of 1 ✔
+[fc/98bbad] process > pipeline:nextclade      [100%] 1 of 1 ✔
+[e6/0a925b] process > pipeline:pangolin       [100%] 1 of 1 ✔
+[d2/db35e0] process > pipeline:telemetry      [100%] 1 of 1 ✔
+[89/039353] process > pipeline:report         [100%] 1 of 1 ✔
+[f2/73b3a9] process > output (17)             [100%] 18 of 18 ✔
+Completed at: 10-Mar-2022 12:01:49
+Duration    : 7m 40s
+CPU hours   : 0.4
+Succeeded   : 33
+
+
+
+real	7m44.442s
+user	1m9.121s
+sys	0m8.066s
+
+```
 
 
 
