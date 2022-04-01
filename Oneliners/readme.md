@@ -53,3 +53,9 @@ lcl|KJ693393.1_cds_AIA12941.1_1	omcdb~~~KJ693393.1~~~AIA12941.1~~~S07_TE.28_2-37
 awk 'FNR==NR{  a[">"$1]=$2;next}$1 in a{  sub(/>/,">"a[$1]"|",$1)}1' headers_list.txt omc.fa | cut -f1 -d "|" >omc_v2.fa
 
 ```
+### >6 Annotating hypothetical proteins from Prokka
+
+```
+for d in $(awk '{print $2}' clustered_proteins ); do grep "$d" ../gffs/*.gff; done | grep -Po "locus_tag=.*$" | sed -e 's/locus_tag=//g' -e 's/;product=/\t/g' -e 's/ /_/g'
+
+```
