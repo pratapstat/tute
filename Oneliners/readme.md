@@ -58,4 +58,6 @@ awk 'FNR==NR{  a[">"$1]=$2;next}$1 in a{  sub(/>/,">"a[$1]"|",$1)}1' headers_lis
 ```
 for d in $(awk '{print $2}' clustered_proteins ); do grep "$d" ../gffs/*.gff; done | grep -Po "locus_tag=.*$" | sed -e 's/locus_tag=//g' -e 's/;product=/\t/g' -e 's/ /_/g'
 
+for d in $(awk '{print $2}' clustered_proteins ); do echo $d; awk -v var="$d" 'BEGIN {RS=">"} $0~var {print ">"$0}' Combined_ffn.fasta >>Plasmid_211_Proteins_for_annotation.fasta; done
+
 ```
