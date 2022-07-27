@@ -67,3 +67,12 @@ for d in $(awk '{print $2}' clustered_proteins ); do echo $d; awk -v var="$d" 'B
 ```
 awk '{print FILENAME"\t"$0}' Self_blast_results.txt | awk '$4>=99' | awk '{print $1"#"$2"#"$3"\t"$9-1"\t"$10"\t"$15"\t"$16}' | sort -k1,1 -k2,2n | mergeBed -c 4,5 -o distinct,distinct | awk '{print $0 "\t" ($3-$2)}' | groupBy -g 1 -c 4,5,6 -o distinct,distinct,sum | awk '{print $0 "\t" ($NF*100)/$2 "\t" ($NF*100)/$3}' | sort -nk5,5 -nk6,6 | awk '$NF>=99 && $(NF-1)>=99' | sed 's/#/\t/g' | awk '!($2==$3)' | cut -f2- >BlastResults_QCov_Scov99_Id99_mergeBed_method2.txt
 ```
+### >8 Place a box in webblogger and to write the code
+```
+<pre class="pre language-bash" style="background: rgb(245, 242, 240); box-sizing: inherit; hyphens: none; line-height: 1.5; margin-bottom: 0.5em; margin-top: 0.5em; overflow-wrap: normal; overflow: auto; padding: 1em; tab-size: 4; text-shadow: white 0px 1px; word-break: normal;"><span style="font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;"><span style="font-size: 14px;">
+<span>---------THIS IS A NICE BOX------INSERT YOUR TEXT HERE----------&nbsp;&nbsp; &nbsp;</span>
+<span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span></span></span></pre>
+
+```
+
+
