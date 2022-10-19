@@ -18,7 +18,7 @@
 1. [Complete single-cell RNAseq analysis walkthrough](https://www.youtube.com/watch?v=uvyG9yLuNSE) - Video + [Github](https://github.com/mousepixels/sanbomics_scripts/blob/main/single_cell_analysis_complete_class.ipynb) 
 2. [Functional analysis of single-cell transcriptomics](https://github.com/saezlab/eccb2022_sc_funcomics) - Cell-cell comunication inference and linking to downstream events
 3. [How to analyze a 1 million cell data set using Scanpy and Harmony](https://support.parsebiosciences.com/hc/en-us/articles/7704577188500-How-to-analyze-a-1-million-cell-data-set-using-Scanpy-and-Harmony)
-4. [Comprehensive analysis of immunogenomics sequencing data in the cloud to facilitate reproducibility and rigor of immunogenomics researc](https://www.youtube.com/watch?v=lmR6NX4qXaw&list=PLmX8XnLr6zeGltwJX4rbjLjpEGEzmghQV)
+4. [Comprehensive analysis of immunogenomics sequencing data in the cloud to facilitate reproducibility and rigor of immunogenomics research](https://www.youtube.com/watch?v=lmR6NX4qXaw&list=PLmX8XnLr6zeGltwJX4rbjLjpEGEzmghQV)
 
 
 
