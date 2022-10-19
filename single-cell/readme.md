@@ -25,4 +25,5 @@
 # Other useful courses
 1. [Quick Basic Statistics Course in R](http://rafalab.dfci.harvard.edu/dsbook/)
 2. [Biomedical Data Science](http://genomicsclass.github.io/book/)
+3. [Cell-cell communication](https://www.youtube.com/watch?v=fOEWkVf2vk0)
 
