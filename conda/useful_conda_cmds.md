@@ -10,6 +10,10 @@ conda create --name PlasClass
 ```
 conda activate PlasClass
 ```
+### Install a package to a conda environment
+```
+conda install -n PlasClass poppunk
+```
 ### Install a package in conda environment
 ```
 conda install -c bioconda plasclass
