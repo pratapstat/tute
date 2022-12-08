@@ -81,7 +81,7 @@ awk '{print $1"#"$2"#"$3"\t"$9-1"\t"$10"\t"$15"\t"$16}' \| # Extract Filename#qu
 
 sort -k1,1 -k2,2n \| # sort for merging in the next steps
 
-mergeBed -c 4,5 -o distinct,distinct \| # on col 4 (qlen) and 5 (slen) # collapse the intervals as below and retain qlen, slen and do not print duplicates:
+mergeBed -c 4,5 -o distinct,distinct \| # on col 4 (qlen) and 5 (slen) # collapse the intervals as below and retain qlen, slen and do not print duplicates of qlen and slen by collapse:
 
 # ENT1-ENT101 0 1210 2495 2495
 # ENT1-ENT101 1210 2495 2495 2495
