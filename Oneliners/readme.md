@@ -71,6 +71,9 @@ time blastn -db db.DB -query query.fa -outfmt '6 qseqid sseqid pident nident len
 
 awk '{print FILENAME"\t"$0}' Self_blast_results.txt | awk '$4>=99' | awk '{print $1"#"$2"#"$3"\t"$9-1"\t"$10"\t"$15"\t"$16}' | sort -k1,1 -k2,2n | mergeBed -c 4,5 -o distinct,distinct | awk '{print $0 "\t" ($3-$2)}' | groupBy -g 1 -c 4,5,6 -o distinct,distinct,sum | awk '{print $0 "\t" ($NF*100)/$2 "\t" ($NF*100)/$3}' | sort -nk5,5 -nk6,6 | awk '$NF>=99 && $(NF-1)>=99' | sed 's/#/\t/g' | awk '!($2==$3)' | cut -f2- >BlastResults_QCov_Scov99_Id99_mergeBed_method2.txt
 ```
+
+a little more detailed explanation of the above command
+
 ```
 awk '{print FILENAME"\t"$0}' Self_blast_results.txt | awk '$4>=99' \| # Filter the alignment with >= 99% percent identity
 
