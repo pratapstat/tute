@@ -79,4 +79,16 @@ awk '{print FILENAME"\t"$0}' Self_blast_results.txt | awk '$4>=99' | awk '{print
 
 ```
 
+### >9 Extract specific fasta sequence using a string or substring from header
+
+```
+awk 'BEGIN {RS=">"} /Chr2/ {print ">"$0}' hg19_genome.fa
+```
+
+### >10 Run jobs parallely in unix shell
+
+```
+parallel --jobs 48 < runme.sh
+
+```
 
