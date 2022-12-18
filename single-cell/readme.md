@@ -28,4 +28,5 @@
 3. [Cell-cell communication](https://www.youtube.com/watch?v=fOEWkVf2vk0)
 4. [Primer on Python for R Users](https://cran.r-project.org/web/packages/reticulate/vignettes/python_primer.html)
 5. [adam gayoso articles](https://adamgayoso.com/blog/)
+6. [Literature study](https://www.jianshu.com/u/015c541f0f04)
 
