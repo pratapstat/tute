@@ -10,6 +10,7 @@
 7. [Analysis of single cell RNA-seq data](https://www.singlecellcourse.org/index.html) - ebook
 8. [Seurat Tutorial - 65k PBMCs](https://support.parsebiosciences.com/hc/en-us/articles/360053078092-Seurat-Tutorial-65k-PBMCs)
 9. [Single-cell and spatial transcriptomics data analysis with Seurat in R](https://yu-tong-wang.github.io/talk/sc_st_data_analysis_R.html)
+10. [Github resource1](https://gist.github.com/npicciani/a179c183cf08faa620fee5b118aacc54)
 
 
 
