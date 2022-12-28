@@ -21,9 +21,11 @@ By the all rule, you tell snakemake which folders you would like to get created,
 
 So you just have to set an output, in order to tell snakemake knows what the rule does.
 
+```
 rule folders:
     output: "./output/{folder}/{sample}"
     shell: "mkdir {output}"
+```
 
 now it knows, that the folders rule creates a file (or in you case a directory) with the scheme ./output/{folder}/{sample}
 Great, finally the shell command create "mkdir {output}" creates the output. Its always better to simply use "{output}" "{input}" and "{params}" than the wildcards by the wildcards object.
