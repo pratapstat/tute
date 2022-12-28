@@ -4,3 +4,5 @@
 2. [Wildcards in Snakemake](https://edwardslab.wpengine.com/wildcards-in-snakemake/)
 3. https://training.nih-cfde.org/en/latest/General-Tools/Cheat-Sheets/snakemake_cheatsheet/
 4. [Snakemake Training](https://github.com/troycomi/snakemake-training)
+5. [Overview Presentation](https://slides.com/johanneskoester/snakemake-tutorial-2016)
+
