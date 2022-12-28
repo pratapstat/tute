@@ -16,3 +16,19 @@ By default snakemake runs only the first rule of a workflow. If its inputs are n
 ### 4
 A rule is not executed until all its input exists, so all you have to do is add the output of the bwa rule
 
+### 5
+By the all rule, you tell snakemake which folders you would like to get created, but you didn't tell snakemake how to create it. Of cause you defined the rule "folders", where you can see a shell command, but snakemake doesn't know, what is it good for. Always remember: there is usually only a single rule without output and thats the "all" rule.
+
+So you just have to set an output, in order to tell snakemake knows what the rule does.
+
+rule folders:
+    output: "./output/{folder}/{sample}"
+    shell: "mkdir {output}"
+
+now it knows, that the folders rule creates a file (or in you case a directory) with the scheme ./output/{folder}/{sample}
+Great, finally the shell command create "mkdir {output}" creates the output. Its always better to simply use "{output}" "{input}" and "{params}" than the wildcards by the wildcards object.
+
+
+Nevertheless, you know that snakemake creates the directories by itself, if they doesn't exist?
+So if you would like to do further analysis by the use of snakemake, you don't have to care about directory creation, its done automatically.
+
