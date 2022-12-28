@@ -1,4 +1,4 @@
-# program to run Species and MLST
+# Snakemake Pipeline to Run MLST, PROKKA AND ROARY given the assembly files in a folder
 
 # Extract filenames which ends with ".fasta" under "Plasmids" folder
 SAMPLES, = glob_wildcards('Plasmids/{name}.fasta') 
