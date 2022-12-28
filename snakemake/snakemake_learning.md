@@ -13,3 +13,6 @@ There might be a potential issue, I noticed you use wrapper for fastqc, I rememb
 ### 3
 By default snakemake runs only the first rule of a workflow. If its inputs are not available, it will look for other rules to produce them.
 
+### 4
+A rule is not executed until all its input exists, so all you have to do is add the output of the bwa rule
+
