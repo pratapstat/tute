@@ -19,3 +19,8 @@ sample_contiglengths %>%
  9 ENT525 Ctg3_len_128014_depth_0.56x_circ    1.00           3
 10 ENT525 Ctg4_len_71861_depth_1.88x_circ     1.00           4
   ```
+
+
+### Code Resources:
+
+1. https://github.com/Snitkin-Lab-Umich/ndm-st147-chicago-ms
