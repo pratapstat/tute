@@ -1,4 +1,4 @@
-Fabian lecture 2 - Beyond The Cell Atlas - https://youtu.be/s7EWKMoNyNM
+Source - Beyond The Cell Atlas - https://youtu.be/s7EWKMoNyNM
 
 Pseudotemporal ordering - break up the clusters - cells progress in different states - cut them up - infer the process by looking at the snapshots - it is not movie but gives us the story
 
