@@ -40,6 +40,81 @@ Overall FT lab works on,
 2) DEG across conditions - DESeq using bulk sequencing - "mean" might be the same but the variation in different cell-types.
 3) Compositional analysis - dynamics of scvelo using RNA velocity, and cell ranks - which tells about transitionary states and terminal states. 
 
+**Lung atlas**
+
+each line is subject - cell type frequency - Sungnak et al. - Single cell eQTLs 
+
+**Problems of cell atlas**
+
+Single cell data integrations
+
+Multiple study and multiple cell types - data integrations - So,we want to create a integrated cell atlas - 
+
+**Unsupervised deep learning** - 
+
+Deep learning for latent space modeling and integration - NeurIPS -
+For perturbation - check perturbation behavior of control one cell and predict perturbation behavior of other cell types
+
+**Integrating Lung cell atlas**
+
+- Deep learning based integration
+- 14 datasets
+- 500,000 cells with annotations. The problem here is people call different types may be sometime high level and sometimes detailed level. Like immunologist - many cell types - hierarchical notion
+
+What to do with cell atlas?
+
+- Rare cell type identities
+- Variant-cell type association
+- Gene module detection
+- Map new data on top of the atlas
+
+**HLCA --> HLCA + New data**
+
+Transfer learning -
+
+**Learning from single cell multi-omics**
+
+scverse - 
+scArches- multi-modal reference atlas - multimodal integration (multigrate)
+
+**Spatial transcriptomics**
+
+FISH based assay - even subcellular resolution - we can see cells in context and map in particular regions but analysis is not trivial.
+
+Spatial components of molecular tissue biology
+
+cell interactions - cellphonedb - correlation of ligands/receptors averaged over - squidpy
+Multimodal version of spatial transcriptomics
+
+**Interactive visualization with interface to napari**
+
+visium dataset - genes - anndata information - project on the screen - export to squidpy analysis.
+
+**defacto computer vision is deep learning model**
+
+graph convolution
+
+```
+Question: (?)
+
+what aspects do you consider in integrating cell atlas apart from talking to cell community?
+```
+How do you deal with the disease? Is that disease cell atlas integrated?
+
+```
+integrated template
+```
+time series information - 
+
+```
+
+```
+
+
+
+
+
+
 
 
 
