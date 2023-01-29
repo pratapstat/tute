@@ -16,4 +16,9 @@ TF binds to promoter, initiates the gene transcription then unspliced to spliced
 
 Basically, according to RNA velocity, a steadystate should have higher spliced reads than the unspliced reads or highest unspliced reads than splcied reads.
 
-But what if the population does not have steadystate?
+But what if the cell population does not have steadystate?
+Expectation Maximization algorithm - to optimise - they observed the steady state 
+
+Based on the dynamic model - cells are transisting - trajectory is inferred.
+
+Gene shared latent time
